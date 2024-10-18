@@ -31,6 +31,7 @@ body {
     height: auto;
     display: grid;
     grid-template-columns: 300px 3fr 300px;
+    grid-template-rows: 130px auto 130px;
     grid-template-areas: 
     'header header header'
     'article main aside'
@@ -207,6 +208,7 @@ footer p:hover {
 @media(max-width: 768px){
     .container {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));;
         grid-template-areas: 
         'header header header'
         'aside aside aside'
@@ -214,5 +216,36 @@ footer p:hover {
         'article article article'
         'footer footer footer'
         ;
+    }
+}
+
+@media(max-width: 310px){
+    .logo a{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    nav a {
+        font-weight: 500;
+        padding: 3px 4px;
+        margin: 0 8px;
+    }
+}
+
+@media(max-width: 310px){
+    .logo a{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    nav a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 3px;
+        margin: 0 5px;
+    }
+    .logo2 img{
+        max-width: 30vh;
+    }
+    aside h2 {
+        font-size: 1.2rem;
     }
 }
